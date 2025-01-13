@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Layout Responsivo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header, .footer {
+            background-color: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .main {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .sidebar, .content {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .sidebar {
+            background-color: #e4e4e4;
+            padding: 20px;
+        }
+
+        .content {
+            background-color: #d4d4d4;
+            padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .main {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Layout Responsivo</h1>
+        </div>
+        <div class="main">
+            <div class="sidebar">
+                <h2>Sidebar</h2>
+                <p>Conteúdo da barra lateral.</p>
+            </div>
+            <div class="content">
+                <h2>Conteúdo Principal</h2>
+                <p>Conteúdo da área principal.</p>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Rodapé</p>
+        </div>
+    </div>
+</body>
+</html>
